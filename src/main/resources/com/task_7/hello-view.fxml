@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.Canvas?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.task_7.HelloController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Таймер"/>
+        <TextField fx:id="timerField" promptText="Время"/>
+        <Label text="Повтор"/>
+        <TextField fx:id="repeatField" promptText="Повтор"/>
+        <Button fx:id="startButton" text="Start" onAction="#start" style="-fx-background-color: gray; -fx-text-fill: white;"/>
+        <Button fx:id="stopButton" text="Stop" onAction="#stop" style="-fx-background-color: gray; -fx-text-fill: white;"/>
+        <Button fx:id="resetButton" text="Clean" onAction="#reset" style="-fx-background-color: gray; -fx-text-fill: white;"/>
+    </HBox>
+
+    <Label fx:id="statusLabel" text="Таймер неактивен"/>
+
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Прошло_с"/>
+        <TextField fx:id="textField" editable="false" prefWidth="200"/>
+        <Button fx:id="textStartButton" text="Start" onAction="#startText" style="-fx-background-color: gray; -fx-text-fill: white;"/>
+        <Button fx:id="textStopButton" text="Stop" onAction="#stopText" style="-fx-background-color: gray; -fx-text-fill: white;"/>
+    </HBox>
+
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Звонок"/>
+        <TextField fx:id="bellField" promptText="Звонок"/>
+        <Button fx:id="bellStartButton" text="Start" onAction="#startBell" style="-fx-background-color: gray; -fx-text-fill: white;"/>
+        <Button fx:id="bellStopButton" text="Stop" onAction="#stopBell" style="-fx-background-color: gray; -fx-text-fill: white;"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Анимация"/>
+        <Button fx:id="clockStartButton" text="Start" onAction="#startClock" style="-fx-background-color: gray; -fx-text-fill: white;"/>
+        <Button fx:id="clockStopButton" text="Stop" onAction="#stopClock" style="-fx-background-color: gray; -fx-text-fill: white;"/>
+    </HBox>
+    <Canvas fx:id="canvas" width="200" height="200"/>
+</VBox>
